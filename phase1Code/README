@@ -1,0 +1,28 @@
+VE450 MDE Project Code
+Author: Zhenghong Sun, Yanting Yu, Suhang Wang, Xinrong You, Heng Lu
+Contact: zhenghsun@gmail.com
+Mentor: Mr.Shuang Wan (Intel)
+Instructor: Prof.Vincent Chang (SJTU-UM Joint Institute)
+
+This piece of software is for video codec auto testing. It can test the 
+difference between two videos.
+The environment is Linux. You need two computers, one for client, which is for 
+the major program running; one is host, where videos are playing. The video 
+capture device is Epiphan VGA2USB. The driver for it should be installed 
+beforehead on the client side.
+
+In order to run the software, you need two computers. Connect these two 
+computer using VGA2USB device.
+In the server computer, go to the src folder, and modify socksrv.c to run your 
+test video. Make the socksrv.c and run it in the terminal.
+In the client computer, go to the src folder, and modify DEST_IP in sockclnt.c 
+according to the server computer IP. Then open the terminal, go to the src 
+folder, and type
+
+make
+./test
+
+Now we only support YUV422 format.
+
+The following are the codes in the src folder.
+
